@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Villa Borderlain</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff6f61, #ffcc70);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #ff6f61;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 3rem 2rem;
+      background-color: #fff;
+      color: #333;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .info p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+/* Para pantallas grandes: 4 en fila */
+@media (min-width: 768px) {
+  .gallery {
+    flex-wrap: nowrap;
+  }
+}
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 768px) {
+      header h1 { font-size: 4rem; }
+      header h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Villa Borderlain</h1>
+    <h2>¡Inscríbete aquí!</h2>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaM7owQORPF8XMhGdCUi7Aygi_CYmxgBn9CZlWYSlLcv3H-Q/viewform?usp=dialog" class="btn" target="_blank">Apúntate</a>
+  </header>
+
+  <section class="info">
+    <h3>🎉 Información de la Fiesta</h3>
+    <p><strong>📍 Lugar:</strong> Espartinas (ubicación exacta días antes del evento)</p>
+    <p><strong>🕘 Hora de inicio:</strong> 21h</p>
+  </section>
+
+  <section>
+    <h3>🏡 Mira la casa</h3>
+    <div class="gallery">
+      <img src="casa4.jpg" alt="Casa 1">
+      <img src="casa2.jpg" alt="Casa 2">
+      <img src="casa3.jpg" alt="Casa 3">
+      <img src="casa1.jpg" alt="Casa 4">
+    </div>
+  </section>
+
+</body>
+</html>
